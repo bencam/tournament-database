@@ -42,6 +42,12 @@ To call the functions defined in the tournament.py module, simply create a pytho
 The database schema itself--as well as the associated views--can be altered in the tournament.sql file.
 
 
+## Attribution notes
+
+Help with the [row_number()](http://gis.stackexchange.com/questions/12233/in-postgis-is-it-possible-to-create-a-view-with-a-unique-id) function, more help with the [row_number()](https://blog.jooq.org/2014/08/12/the-difference-between-row_number-rank-and-dense_rank/) function, how to use the [modulo](http://stackoverflow.com/questions/3756928/select-row-if-the-value-2-1-mod) operator
+
+
 ## License
 
 Tournament Database is released under the [MIT License](http://opensource.org/licenses/MIT).
+
