@@ -78,7 +78,3 @@ CREATE VIEW pairings_v AS
 	FULL OUTER JOIN odds_v
 	ON evens_v.row_number = odds_v.row_number;
 
---Attribution notes: 
---GIS Stack Exchange user 'geographika' helped me understand how to use the row_number() function (see: http://gis.stackexchange.com/questions/12233/in-postgis-is-it-possible-to-create-a-view-with-a-unique-id)
---A blog entry at jooq.org also helped me with the row_number() function (see: https://blog.jooq.org/2014/08/12/the-difference-between-row_number-rank-and-dense_rank/)
---Stack Overflow user 'OMG ponies' helped me understand how to use the modulo function (see: http://stackoverflow.com/questions/3756928/select-row-if-the-value-2-1-mod)
