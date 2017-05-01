@@ -2,23 +2,36 @@
 
 
 '''
-The tournament.py file is a module that uses the psycopg2 library to query a PostgreSQL database system.
+The tournament.py file is a module that uses the psycopg2 library to query
+a PostgreSQL database system.
 
 The module includes seven functions:
 
-1. The connect() function connects to the PostgreSQL database and returns a connection.
+1. The connect() function connects to the PostgreSQL database and returns
+a connection.
 
-2. The deleteMatches() function deletes all match record entries in the database
+2. The deleteMatches() function deletes all match record entries
+in the database.
 
 3. The deletePlayers() function deletes all player entries in the database.
 
-4. The countPlayers() function returns the number of player entries in the database.
+4. The countPlayers() function returns the number of player entries
+in the database.
 
-5. The registerPlayer(name) function enables a user to add a new player record into the database. The user passes a player's name as a parameter, and the database assigns the player a unique ID.
+5. The registerPlayer(name) function enables a user to add a new player
+record into the database. The user passes a player's name as a parameter,
+and the database assigns the player a unique ID.
 
-6. The playerStandings() function returns a list of tuples, with each tuple containing the ID, name, number of wins, and number of matches played for every registered player. The list is sorted by wins (the player with the most number of wins appears at the top of the list).
+6. The playerStandings() function returns a list of tuples, with each
+tuple containing the ID, name, number of wins, and number of matches played
+for every registered player. The list is sorted by wins (the player with the
+most number of wins appears at the top of the list).
 
-7. The reportMatch(winner, loser) function enables a user to input the results of each match into the database. The swissPairings() function returns a list indicating how the players should be paired for the next round of matches (according to the Swiss-system tournament method). The list is composed of tuples, with each tuple containing the IDs and names of the paired players.
+7. The reportMatch(winner, loser) function enables a user to input the results
+of each match into the database. The swissPairings() function returns a list
+indicating how the players should be paired for the next round of matches
+(according to the Swiss-system tournament method). The list is composed of
+tuples, with each tuple containing the IDs and names of the paired players.
 
 '''
 
