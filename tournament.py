@@ -73,7 +73,7 @@ def countPlayers():
     c = db.cursor()
     query = "SELECT COUNT(players.id) FROM players"
     c.execute(query)
-    count = c.fetchone()[0]     # Posts by Udacity forum mentor 'skh' helped me figure this part out (see: https://discussions.udacity.com/t/p3-commands-work-in-psql-shell-but-not-in-tournament-test-script/45508/6).  # NOQA
+    count = c.fetchone()[0]
     db.commit()
     db.close()
     return count
