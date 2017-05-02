@@ -44,7 +44,7 @@ The database schema itself--as well as the associated views--can be altered in t
 
 ## Attribution notes
 
-Help with the [row_number()](http://gis.stackexchange.com/questions/12233/in-postgis-is-it-possible-to-create-a-view-with-a-unique-id) function, more help with the [row_number()](https://blog.jooq.org/2014/08/12/the-difference-between-row_number-rank-and-dense_rank/) function, how to use the [modulo](http://stackoverflow.com/questions/3756928/select-row-if-the-value-2-1-mod) operator
+Help with the [row_number()](http://gis.stackexchange.com/questions/12233/in-postgis-is-it-possible-to-create-a-view-with-a-unique-id) function, more help with the [row_number()](https://blog.jooq.org/2014/08/12/the-difference-between-row_number-rank-and-dense_rank/) function, how to use the [modulo](http://stackoverflow.com/questions/3756928/select-row-if-the-value-2-1-mod) operator, fetching the right value in a [tuple](https://discussions.udacity.com/t/p3-commands-work-in-psql-shell-but-not-in-tournament-test-script/45508/6)
 
 
 ## License
