@@ -1,5 +1,5 @@
 --Create a database called tournament and connect to it
---Note: the drop database line is for ease of use during testing
+--(The drop database line is for ease of use during testing)
 DROP DATABASE IF EXISTS tournament;
 CREATE DATABASE tournament;
 \c tournament;
@@ -44,12 +44,6 @@ CREATE VIEW standings_v AS
 	ON wins_v.id = matches_v.player_id
 	ORDER BY wins DESC;
 
---Attribution notes:
---Udacity course developer 'PhilipCoach' helped me understand how to combine two different views in a third view (see: https://discussions.udacity.com/t/views-playerstandings/15415/7)
---Udacity forum user 'Brian_Bradshaw' introduced me to the coalesce function and helped me understand how to use it (see: https://discussions.udacity.com/t/views-playerstandings/15415/12)
---Stack Overflow user 'radar' also helped me understand the coalesce function (see: http://stackoverflow.com/questions/27300552/postgresql-select-case-coalesce)
-
-
 --Create views for the swissPairings() function in tournament.py
 --The row_num_v view simply recreates the standings_v view and adds a row_number column
 CREATE VIEW row_num_v AS
@@ -77,4 +71,3 @@ CREATE VIEW pairings_v AS
 	FROM evens_v
 	FULL OUTER JOIN odds_v
 	ON evens_v.row_number = odds_v.row_number;
-
