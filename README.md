@@ -15,7 +15,7 @@ The `registerPlayer(name)` function enables a user to add a new player record in
 
 The `reportMatch(winner, loser)` function enables a user to input the results of each match into the database. The `swissPairings()` function returns a list indicating how the players should be paired for the next round of matches (according to the Swiss-system tournament method). The list is composed of tuples, with each tuple containing the IDs and names of the paired players.
 
-The tournament_test.py file is a client program. It determines if the functions in tournament.py (and consequently the tables and views in tournament.sql) are defined correctly.
+The tournament_test.py file is a client program. It was created by Udacity for the purpose of determining if the functions in tournament.py (and consequently the tables and views in tournament.sql) are defined correctly.
 
 
 ## Instal instructions
