@@ -82,11 +82,10 @@ def countPlayers():
 def registerPlayer(name):
     """Adds a player to the tournament database.
 
-    The database assigns a unique serial id number for the player. (This
-    should be handled by your SQL database schema, not in your Python code.)
+    The database assigns a unique serial id number for the player.
 
     Args:
-      name: the player's full name (need not be unique).
+      name: the player's full name
     """
     db = connect()
     c = db.cursor()
@@ -103,7 +102,7 @@ def playerStandings():
     tied for first place if there is currently a tie.
 
     Returns:
-      A list of tuples, each of which contains (id, name, wins, matches):
+      A list of tuples, each of which contains an id, name, wins, and matches:
         id: the player's unique id (assigned by the database)
         name: the player's full name (as registered)
         wins: the number of matches the player has won
@@ -123,8 +122,8 @@ def reportMatch(winner, loser):
     """Records the outcome of a single match between two players.
 
     Args:
-      winner:  the id number of the player who won
-      loser:  the id number of the player who lost
+      winner: the id number of the player who won
+      loser: the id number of the player who lost
     """
     db = connect()
     c = db.cursor()
