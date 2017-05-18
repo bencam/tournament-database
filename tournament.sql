@@ -1,3 +1,22 @@
+/*
+The tournament.sql file contains the database schema.
+
+This file contains two tables: a players table and a matches table. The
+players table stores each player's id (the table's primary key) and full name.
+
+The matches table stores each match's id (the table's primary key) as well
+as the id of the winner and loser of each match (foreign keys to the id column
+in the players table).
+
+The tournament.sql file also includes seven views.
+
+The first three views (wins_v, matches_v, standings_v) are used to create
+the playerStandings() function in the tournament.py module. The last four
+views (row_num_v, evens_v, odds_v, pairings_v) are used to create the
+swissPairings() function in the tournament.py module.
+*/
+
+
 --Create a database called tournament and connect to it
 --(The drop database line is for ease of use during testing)
 DROP DATABASE IF EXISTS tournament;
@@ -45,7 +64,8 @@ CREATE VIEW standings_v AS
 	ORDER BY wins DESC;
 
 --Create views for the swissPairings() function in tournament.py
---The row_num_v view simply recreates the standings_v view and adds a row_number column
+--The row_num_v view simply recreates the standings_v view and adds
+--a row_number column
 CREATE VIEW row_num_v AS
 	SELECT *, ROW_NUMBER() OVER(ORDER BY standings_v.wins)
 	FROM standings_v
@@ -65,7 +85,8 @@ CREATE VIEW odds_v AS
 	WHERE row_number % 2 != 0
 	ORDER BY wins DESC;
 
---The pairings_v view combines the evens_v and odds_v views together with a full outer join
+--The pairings_v view combines the evens_v and odds_v views together
+--with a full outer join
 CREATE VIEW pairings_v AS
 	SELECT evens_v.id AS id1, evens_v.name AS name1, odds_v.id AS id2, odds_v.name AS name2
 	FROM evens_v
