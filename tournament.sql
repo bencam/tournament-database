@@ -1,7 +1,7 @@
 /*
 The tournament.sql file contains the database schema.
 
-This file contains two tables: a players table and a matches table. The
+This file includes two tables: a players table and a matches table. The
 players table stores each player's id (the table's primary key) and full name.
 
 The matches table stores each match's id (the table's primary key) as well
